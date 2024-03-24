@@ -10,7 +10,29 @@
 <body>
     <section>
         <div class="Calc1">
-            <h2>Scientific calculator</h2>
+            <!--   <h2>Scientific calculator</h2>   -->
+            <div class="display">
+                <div id="previous"></div>
+                <div id="current"></div>
+            </div>
+            <button class="col-2 btn1" onclick="display.removeNumbers()">C</button>
+            <button class="btn1" onclick="display.deleteNumber()">&larr;</button>
+            <button class="operator btn1" value="divide">%</button>
+            <button class="number btn1">7</button>
+            <button class="number btn1">8</button>
+            <button class="number btn1">9</button>
+            <button class="operator btn1" value="multiply">x</button>
+            <button class="number btn1">4</button>
+            <button class="number btn1">5</button>
+            <button class="number btn1">6</button>
+            <button class="operator btn1" value="subtract">-</button>
+            <button class="number btn1">1</button>
+            <button class="number btn1">2</button>
+            <button class="number btn1">3</button>
+            <button class="operator btn1" value="add">+</button>
+            <button class="col-2 number btn1">0</button>
+            <button class="number btn1">.</button>
+            <button class="operator btn1" value="equal">=</button>
         </div>
     </section>
     
