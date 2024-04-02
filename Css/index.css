@@ -5,13 +5,13 @@
 
     --calc1: #06D6A0;
     --dark-calc1: #05B384;
-    --text-calc1: #000000;
+    --text-calc1: #000;
 
-    --calc2: #fff;
-    --dark-calc2: #fff;
-    --text-calc2: #000000;
+    --calc2: #EF476F;
+    --dark-calc2: #F26989;
+    --text-calc2: #fff;
 
-    --calc3: #fff;
+    --calc3: #FFD166;
     --dark-calc3: #fff;
     --text-calc3: #000000;
 
@@ -40,14 +40,18 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     padding: 1rem 2rem;
+    gap: 5rem;
 }
+
+
 
 /*               ----------------------------               Calc1   */
 .Calc1 {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
-    grid-template-rows: 140px repeat(5, 60px);
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
     background-color: var(--calc1);
     padding: 15px;
     border-radius: 32px;
@@ -90,10 +94,82 @@ section {
     background: var(--dark-calc1);
 }
 
-.btn1:focus{ 
-    outline: none;
-}
-
 .col-2 { 
     grid-column: span 2;
+}
+
+
+
+/*               ----------------------------               Calc2   */
+.Calc2 {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: 30px repeat(3, 40px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    background-color: var(--calc2);
+    padding: 20px;
+    border-radius: 22px;
+    color: var(--text-calc2);
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+.col-4 {
+    grid-column: span 4;
+    text-align: center;
+}
+
+.entrada {
+    position: relative;
+}
+
+.entrada label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 2px;
+    background-color: var(--calc2);
+    pointer-events: none;
+}
+
+.entrada input, .entrada select {
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 2px solid var(--dark-calc2);
+    background: transparent;
+    outline: none;
+    color: var(--text-calc2);
+}
+
+.entrada option {
+    color: #000;
+}
+
+.entrada input::placeholder {
+    color: var(--dark-calc2);
+}
+
+label.name {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+}
+
+#tAnos {
+    cursor: default;
+}
+
+.btn {
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+.grupo-1, .grupo-2, .grupo-3  {
+    border-radius: 10px;
+    border: 2px solid var(--dark-calc2);
 }
