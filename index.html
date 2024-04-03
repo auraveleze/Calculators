@@ -8,52 +8,99 @@
     <link rel="stylesheet" href="Css/index.css">
 </head>
 <body>
-    <section>
-        <div class="Calc1">
+    <section class="calc-content">
+        <div class="one">
             <!--   <h2>Scientific calculator</h2>   -->
             <div class="display">
                 <div id="previous"></div>
                 <div id="current"></div>
             </div>
-            <button class="col-2 btn1" onclick="display.removeNumbers()">C</button>
-            <button class="btn1" onclick="display.deleteNumber()">&larr;</button>
-            <button class="operator btn1" value="divide">/</button>
-            <button class="number btn1">7</button>
-            <button class="number btn1">8</button>
-            <button class="number btn1">9</button>
-            <button class="operator btn1" value="multiply">x</button>
-            <button class="number btn1">4</button>
-            <button class="number btn1">5</button>
-            <button class="number btn1">6</button>
-            <button class="operator btn1" value="subtract">-</button>
-            <button class="number btn1">1</button>
-            <button class="number btn1">2</button>
-            <button class="number btn1">3</button>
-            <button class="operator btn1" value="add">+</button>
-            <button class="col-2 number btn1">0</button>
-            <button class="number btn1">.</button>
-            <button class="operator btn1" value="equal">=</button>
+            <button class="col-2 btn-one" onclick="display.removeNumbers()">C</button>
+            <button class="btn-one" onclick="display.deleteNumber()">&larr;</button>
+            <button class="operator btn-one" value="divide">/</button>
+            <button class="number btn-one">7</button>
+            <button class="number btn-one">8</button>
+            <button class="number btn-one">9</button>
+            <button class="operator btn-one" value="multiply">x</button>
+            <button class="number btn-one">4</button>
+            <button class="number btn-one">5</button>
+            <button class="number btn-one">6</button>
+            <button class="operator btn-one" value="subtract">-</button>
+            <button class="number btn-one">1</button>
+            <button class="number btn-one">2</button>
+            <button class="number btn-one">3</button>
+            <button class="operator btn-one" value="add">+</button>
+            <button class="col-2 number btn-one">0</button>
+            <button class="number btn-one">.</button>
+            <button class="operator btn-one" value="equal">=</button>
         </div>
     
-        <div class="Calc2-3">
-            <div class="Calc2">
+        <div class="calcs-content">
+            <div class="calc two">
                 <h2 class="col-4">Interest Calculator</h2>
                 
-                <label class="grupo-1 name">Tipo de interes</label>
-                <div class="grupo-1">
-                    <div>
-                        <input type="radio" name="interes" value="simple">
-                        <label for="simple">Simple</label>
+                    <label class="title">Tipo de interes</label>
+                    <div class="">
+                        <div>
+                            <input type="radio" name="interest" value="simple">
+                            <label for="simple">Simple</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="interest" value="compound">
+                            <label for="compound">Compuesto</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" name="interes" value="compuesto">
-                        <label for="compuesto">Compuesto</label>
+                
+                    <label class="title" for="value-calculated-one">¿Que vamos a calcular?</label>
+                    <div class="input-box">
+                        <select id="value-calculated-one">
+                            <option value="valorPresente">Valor presente</option>
+                            <option value="valorFuturo">Valor futuro</option>
+                            <option value="tiempoMeses">Cantidad de tiempo</option>
+                            <option value="cuota">Tasa de interés</option>
+                        </select>
                     </div>
+
+                <div class="input-box">
+                    <input type="number">
+                    <label>Valor presente</label>
                 </div>
 
-                <label class="grupo-2 name" for="calcular-tipo">¿Que vamos a calcular?</label>
-                <div class="entrada">
-                    <select class="grupo-2" id="calcular-tipo">
+                <div class="input-box">
+                    <input type="number">
+                    <label>Valor futuro</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="number" placeholder="Porcenjate (%)">
+                    <label for="">Tasa de interés</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="autocomplete-input">
+                    <label for="autocomplete-input">Periodo de la tasa</label>
+                    <div id="autocomplete-options" class="autocomplete-options"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="number" placeholder="Meses">
+                    <label>Cantidad de tiempo</label>
+                </div>
+
+                    <label class="title">Tiempo en años</label>
+                    <div class="input-box">
+                        <input id="years" type="text" readonly>
+                    </div>
+
+                <button class="btn" type="button" onclick="calcularInteres()">Calcular</button>
+            </div>
+        
+            <div class="calc three">
+                <h2 class="col-4">Uniform Payment Calculator</h2>
+
+                <label class="title col-2" for="value-calculated-two">¿Que vamos a calcular?</label>
+                <div class="input-box col-2">
+                    <select id="value-calculated-two">
                         <option value="valorPresente">Valor presente</option>
                         <option value="valorFuturo">Valor futuro</option>
                         <option value="tiempoMeses">Cantidad de tiempo</option>
@@ -61,42 +108,37 @@
                     </select>
                 </div>
 
-                <div class="entrada">
+                <div class="input-box">
                     <input type="number">
-                    <label>Valor presente</label>
+                    <label>Tasa de interés</label>
                 </div>
 
-                <div class="entrada calcular">
-                    <input type="number">
-                    <label>Valor futuro</label>
-                </div>
-
-                <div class="entrada">
-                    <input type="number" placeholder="Porcenjate (%)">
-                    <label for="">Tasa de interés</label>
-                </div>
-
-                <div class="entrada">
-                    <input type="text" id="autocomplete-input">
-                    <label for="autocomplete-input">Periodo de la tasa</label>
-                    <div id="autocomplete-options" class="autocomplete-options"></div>
-                </div>
-
-                <div class="entrada">
+                <div class="input-box">
                     <input type="number" placeholder="Meses">
                     <label>Cantidad de tiempo</label>
                 </div>
 
-                <label class="grupo-3 name">Tiempo en años</label>
-                <div class="grupo-3 entrada">
-                    <input id="tAnos" type="text" readonly>
+                <div class="input-box">
+                    <input type="number">
+                    <label>Cantidad de tiempo</label>
                 </div>
 
-                <button class="btn" type="button" onclick="calcular()">Calcular</button>
-            </div>
-        
-            <div class="Calc3">
-                <h2>Uniform Payment Calculator</h2>
+                <div class="input-box">
+                    <input type="number">
+                    <label>Cantidad de tiempo</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="number">
+                    <label>Cantidad de tiempo</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="number">
+                    <label>Cantidad de tiempo</label>
+                </div>
+
+                <button class="btn col-2" type="button" onclick="calcularPagoUniforme()">Calcular</button>
             </div>
         </div>
     </section>
@@ -110,6 +152,7 @@
     <script src="Js/calc1.js" type="text/javascript"></script>
     <script src="Js/calc2.js" type="text/javascript"></script>
     <script src="Js/calc3.js" type="text/javascript"></script>
+    <script src="Js/calc4.js" type="text/javascript"></script>
     <script src="Js/index.js" type="text/javascript"></script>
 </body>
 </html>
