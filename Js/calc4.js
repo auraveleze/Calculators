@@ -1,4 +1,4 @@
-function calcularPagoPrestamo(){
+function calculateLoan(){
     document.getElementById("tableBody").innerHTML="";
     const amount=Number((document.getElementById("amount").value).replace(/[.,;]/g, '')); 
     const time=Number(document.getElementById("time").value); 

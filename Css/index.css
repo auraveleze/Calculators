@@ -1,21 +1,20 @@
 :root {
     --font-text: 'Fraunces', serif;
+    --bg-color: #011034;
 
-    --bg-color: #011034;          /*    021024    */
-
-    --calc1: #02c9af;             /*    c2e8ff    */
+    --calc1: #02c9af;
     --dark-calc1: #018D7B;
     --text-calc1: #000;
 
-    --calc2: #049ce4;             /*    7c9fc9    */
+    --calc2: #049ce4;
     --dark-calc2: #037CB5;
     --text-calc2: #000;
 
-    --calc3: #2b4f8d;             /*    5482b3    */
+    --calc3: #2b4f8d;
     --dark-calc3: #1D355E;
     --text-calc3: #000;
 
-    --calc4: #C7EDE4;             /*    5482b3    */
+    --calc4: #C7EDE4;
     --dark-calc4: #74D2BC;
     --text-calc4: #000;
 }
@@ -46,9 +45,9 @@ section {
 
 
 
-/*               ----------------------------               Calc 1   */
+/*     - - - - - - - - - -      Calculator 1     - - - - - - - - - -      */
 .calc-content {
-    gap: 2.6rem;
+    gap: 3.5rem;
 }
 
 .one {
@@ -103,7 +102,7 @@ section {
 
 
 
-/*               ----------------------------               Calc 2-3   */
+/*     - - - - - - - - - -      Calculator 2 and 3     - - - - - - - - - -      */
 .calcs-content {
     display: flex;
     flex-direction: column;
@@ -114,7 +113,7 @@ section {
 .calc {
     display: grid;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: 30px repeat(3, 45px);
+    grid-template-rows: 30px repeat(3, 40px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     padding: 20px;
@@ -209,7 +208,7 @@ label.title {
 
 
 
-/*               ----------------------------               Calc 4   */
+/*     - - - - - - - - - -      Calculator 4     - - - - - - - - - -      */
 .four {
     display: flex;
     flex-direction: column;
@@ -256,16 +255,13 @@ label.title {
 
 .four th {
     background-color: var(--dark-calc4);
-    position: sticky;
-    top: 0;
-    
     height: 40px;
 }
 
 .four td {
+    letter-spacing: 2px;
     background-color: #fff5;
-    height: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 35px; 
 }
 
 .four tbody tr:nth-child(even) {

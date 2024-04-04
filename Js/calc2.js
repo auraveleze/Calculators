@@ -1,4 +1,4 @@
-//* Autocompletar opcion de periodo de aplicacion de tasa efectiva
+//* Auto completar --> periodo de aplicación de tasa efectiva
 const inputField = document.getElementById('autocomplete-input');
 const autocompleteOptions = document.getElementById('autocomplete-options');
 

@@ -1,3 +1,8 @@
+const displayPreviousVal = document.getElementById('previous');
+const displayCurrentVal = document.getElementById('current');
+const numberButtons = document.querySelectorAll('.number');
+const operatorButtons = document.querySelectorAll('.operator');
+
 class Display {
     constructor(displayPreviousVal, displayCurrentVal) {
         this.displayCurrentVal = displayCurrentVal;
@@ -71,3 +76,13 @@ class Scientific {
         return num1 / num2;
     }
 }
+
+const display = new Display(displayPreviousVal, displayCurrentVal);
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => display.addNumber(button.innerHTML));
+});
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', () => display.compute(button.value))
+});
