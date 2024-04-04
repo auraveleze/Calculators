@@ -16,7 +16,7 @@
     --text-calc3: #000;
 
     --calc4: #C7EDE4;             /*    5482b3    */
-    --dark-calc4: #A3E1D2;
+    --dark-calc4: #74D2BC;
     --text-calc4: #000;
 }
 
@@ -48,7 +48,7 @@ section {
 
 /*               ----------------------------               Calc 1   */
 .calc-content {
-    gap: 6rem;
+    gap: 2.6rem;
 }
 
 .one {
@@ -113,8 +113,8 @@ section {
 
 .calc {
     display: grid;
-    grid-template-columns: repeat(4, 180px);
-    grid-template-rows: 30px repeat(3, 40px);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 30px repeat(3, 45px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     padding: 20px;
@@ -165,19 +165,18 @@ section {
     height: 100%;
     border-radius: 10px;
     padding: 0 15px;
-    
     background: transparent;
     outline: none;
 }
 
 .two .input-box input,
 .two .input-box select {
-    border: 2px solid var(--dark-calc2);
+    border: 2.3px solid var(--dark-calc2);
 }
 
 .three .input-box input,
 .three .input-box select {
-    border: 2px solid var(--dark-calc3);
+    border: 2.3px solid var(--dark-calc3);
 }
 
 .input-box option {
@@ -203,16 +202,72 @@ label.title {
 }
 
 .btn {
+    cursor: pointer;
     border-radius: 10px;
     font-size: 1.1em;
 }
 
-/*
-.field-one,
-.field-two,
-.field-three {}
-*/
-
 
 
 /*               ----------------------------               Calc 4   */
+.four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    background-color: var(--calc4);
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+    overflow: hidden;
+}
+
+.four .content {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 40px auto;
+    grid-column-gap: 1.5rem;
+    padding: 30px;
+}
+
+.four .input-box label {
+    background-color: var(--calc4);
+}
+
+.four .input-box input{
+    border: 2.3px solid var(--dark-calc4);
+}
+
+.four .input-box input::placeholder {
+    color: var(--dark-calc4);
+}
+
+.four .table {
+    border-radius: 22px;
+    width: 92%;
+    overflow: hidden;
+}
+
+.four table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+.four th {
+    background-color: var(--dark-calc4);
+    position: sticky;
+    top: 0;
+    
+    height: 40px;
+}
+
+.four td {
+    background-color: #fff5;
+    height: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.four tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.51);
+}
