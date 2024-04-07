@@ -196,7 +196,7 @@ label.title {
     text-align: center;
 }
 
-#years {
+.inactive {
     cursor: default;
 }
 

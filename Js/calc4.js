@@ -1,8 +1,8 @@
 function calculateLoan(){
     document.getElementById("tableBody").innerHTML="";
     const amount=Number((document.getElementById("amount").value).replace(/[.,;]/g, '')); 
-    const time=Number(document.getElementById("time").value); 
-    const interest=Number(document.getElementById("interest").value); 
+    const time=Number(document.getElementById("time-three").value); 
+    const interest=Number(document.getElementById("interest-three").value); 
 
     if(amount>0){   
         mont=0;

@@ -43,55 +43,60 @@
                     <label class="title">Tipo de interés</label>
                     <div class="">
                         <div>
-                            <input type="radio" name="interest" value="simple">
-                            <label for="simple">Simple</label>
+                            <input type="radio" id="typeInt" value="simple">
+                            <label>Simple</label>
                         </div>
                         <div>
-                            <input type="radio" name="interest" value="compound">
-                            <label for="compound">Compuesto</label>
+                            <input type="radio" id="typeInt" value="compound">
+                            <label>Compuesto</label>
                         </div>
                     </div>
                 
-                    <label class="title" for="value-calculated-one">¿Que vamos a calcular?</label>
+                    <label class="title">¿Que vamos a calcular?</label>
                     <div class="input-box">
                         <select id="value-calculated-one">
-                            <option value="valorPresente">Valor presente</option>
-                            <option value="valorFuturo">Valor futuro</option>
-                            <option value="tiempoMeses">Cantidad de tiempo</option>
-                            <option value="cuota">Tasa de interés</option>
+                            <option value="1">Valor presente</option>
+                            <option value="2">Valor futuro</option>
+                            <option value="3">Cantidad de tiempo</option>
+                            <option value="4">Tasa de interés</option>
                         </select>
                     </div>
 
                 <div class="input-box">
-                    <input type="text">
+                    <input type="text" id="presentVal-one" value="">
                     <label>Valor presente</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text">
+                    <input type="text" id="futureVal-one" value="">
                     <label>Valor futuro</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Porcentaje (%)">
-                    <label for="">Tasa de interés</label>
+                    <input type="text" id="interest-one" value="" placeholder="Porcentaje">
+                    <label>Tasa de interés</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" id="autocomplete-input">
-                    <label for="autocomplete-input">Periodo de la tasa</label>
+                    <input type="text" id="time-one" value="" placeholder="Meses">
+                    <label>Cantidad de tiempo</label>
+                </div>
+
+                <div class="input-box">
+                    <input class="inactive" id="years" value="" type="text" readonly>
+                    <label>Tiempo en años</label>
+                </div>
+
+                <div class="input-box">
+                    <input id="autocomplete-input" value="" type="text" >
+                    <label>Periodo de la tasa</label>
                     <div id="autocomplete-options" class="autocomplete-options"></div>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Meses">
-                    <label>Cantidad de tiempo</label>
+                    <input class="inactive" id="effectiveRate" value="" type="text" readonly>
+                    <label>Tasa interés efectiva</label>
                 </div>
-
-                    <label class="title">Tiempo en años</label>
-                    <div class="input-box">
-                        <input id="years" type="text" readonly>
-                    </div>
 
                 <button class="btn" onclick="calculateInterest()">Calcular</button>
             </div>
@@ -99,8 +104,10 @@
             <div class="calc three">
                 <h2 class="col-4">Calculadora de Pagos Uniformes</h2>
 
-                <label class="title col-2" for="value-calculated-two">¿Que vamos a calcular?</label>
-                <div class="input-box col-2">
+                <div></div>
+
+                <label class="title" for="value-calculated-two">¿Que vamos a calcular?</label>
+                <div class="input-box">
                     <select id="value-calculated-two">
                         <option value="valorPresente">Valor presente</option>
                         <option value="valorFuturo">Valor futuro</option>
@@ -109,34 +116,36 @@
                     </select>
                 </div>
 
+                <div></div>
+
                 <div class="input-box">
-                    <input type="text">
+                    <input type="text" id="interest2">
                     <label>Tasa de interés</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Meses">
+                    <input type="text" id="time2" placeholder="Meses">
                     <label>Cantidad de tiempo</label>
                 </div>
 
                 <div class="input-box">
                     <input type="text">
-                    <label>Cantidad de tiempo</label>
+                    <label>Valor presente</label>
                 </div>
 
                 <div class="input-box">
                     <input type="text">
-                    <label>Cantidad de tiempo</label>
+                    <label>Anualidad</label>
                 </div>
 
                 <div class="input-box">
                     <input type="text">
-                    <label>Cantidad de tiempo</label>
+                    <label>Valor futuro</label>
                 </div>
 
                 <div class="input-box">
                     <input type="text">
-                    <label>Cantidad de tiempo</label>
+                    <label>Rentabilidad (vf)</label>
                 </div>
 
                 <button class="btn col-2" onclick="calculateUniformPay()">Calcular</button>
@@ -155,12 +164,12 @@
                 </div>
 
                 <div class="input-box">
-                    <input type="text" id="interest" placeholder="Mensual">
+                    <input type="text" id="interest-three" placeholder="Mensual">
                     <label for="interest">Tasa de interés</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" id="time" placeholder="Meses">
+                    <input type="text" id="time-three" placeholder="Meses">
                     <label for="time">Número de cuotas</label>
                 </div>
 
