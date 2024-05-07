@@ -43,6 +43,21 @@ section {
     padding: 1rem 2rem;
 }
 
+.col-2 { 
+    grid-column: span 2;
+    text-align: center;
+}
+
+.col-3 { 
+    grid-column: span 3;
+    text-align: center;
+}
+
+.col-4 {
+    grid-column: span 4;
+    text-align: center;
+}
+
 
 
 /*     - - - - - - - - - -      Calculator 1     - - - - - - - - - -      */
@@ -96,9 +111,6 @@ section {
     background: var(--dark-calc1);
 }
 
-.col-2 { 
-    grid-column: span 2;
-}
 
 
 
@@ -110,7 +122,7 @@ section {
     gap: 2.6rem;
 }
 
-.calc {
+.calcs-content .calc {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: 30px repeat(3, 40px);
@@ -129,11 +141,6 @@ section {
 .three {
     background-color: var(--calc3);
     color: var(--text-calc3);
-}
-
-.col-4 {
-    grid-column: span 4;
-    text-align: center;
 }
 
 .input-box {
@@ -266,4 +273,97 @@ label.title {
 
 .four tbody tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.51);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.five {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 30px repeat(4, 40px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+    background-color: var(--calc1);
+    color: var(--text-calc1);
+}
+
+.five .input-box label {
+    background-color: var(--calc1);
+}
+
+.five .input-box input,
+.five .input-box select {
+    border: 2.3px solid var(--dark-calc1);
+}
+
+.five .input-box input::placeholder {
+    color: var(--dark-calc1);
+}
+
+
+
+.six {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 30px repeat(4, 40px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+    background-color: var(--calc2);
+    color: var(--text-calc2);
+}
+
+.six .input-box label {
+    background-color: var(--calc2);
+}
+
+.six .input-box input,
+.six .input-box select {
+    border: 2.3px solid var(--dark-calc2);
+}
+
+.six .input-box input::placeholder {
+    color: var(--dark-calc2);
 }
