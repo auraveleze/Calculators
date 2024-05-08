@@ -62,15 +62,15 @@ section {
 
 /*     - - - - - - - - - -      Calculator 1     - - - - - - - - - -      */
 .calc-content {
-    gap: 3.5rem;
+    gap: 4rem;
 }
 
 .one {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: 155px repeat(5, 70px);
     background-color: var(--calc1);
-    padding: 15px;
+    padding: 13px;
     border-radius: 32px;
     box-shadow: 15px 10px 0px 5px #00000033;
 }
@@ -83,7 +83,7 @@ section {
     text-align: right;
     justify-content: space-between;
     border-radius: 32px;
-    padding: 16px;
+    padding: 14px;
     margin: 10px 10px 20px;
     background-color: #000000b9;
     word-break: break-all;
@@ -119,16 +119,16 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.6rem;
+    gap: 2.5rem;
 }
 
 .calcs-content .calc {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: 30px repeat(3, 40px);
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: 25px repeat(3, 40px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
-    padding: 20px;
+    padding: 15px;
     border-radius: 22px;
     box-shadow: 15px 10px 0px 5px #00000033;
 }
@@ -150,7 +150,7 @@ section {
 .input-box label {
     position: absolute;
     top: -10px;
-    left: 10px;
+    left: 9px;
     font-size: 1em;
     font-weight: 600;
     padding: 0 2px;
@@ -170,19 +170,19 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    padding: 0 15px;
+    padding: 0 10px;
     background: transparent;
     outline: none;
 }
 
 .two .input-box input,
 .two .input-box select {
-    border: 2.3px solid var(--dark-calc2);
+    border: 1.5px solid var(--dark-calc2);
 }
 
 .three .input-box input,
 .three .input-box select {
-    border: 2.3px solid var(--dark-calc3);
+    border: 1.5px solid var(--dark-calc3);
 }
 
 .input-box option {
@@ -198,7 +198,7 @@ section {
 }
 
 label.title {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 500;
     text-align: center;
 }
@@ -241,7 +241,7 @@ label.title {
 }
 
 .four .input-box input{
-    border: 2.3px solid var(--dark-calc4);
+    border: 1.5px solid var(--dark-calc4);
 }
 
 .four .input-box input::placeholder {
@@ -323,21 +323,21 @@ label.title {
     padding: 20px;
     border-radius: 22px;
     box-shadow: 15px 10px 0px 5px #00000033;
-    background-color: var(--calc1);
-    color: var(--text-calc1);
+    background-color: var(--calc2);
+    color: var(--text-calc2);
 }
 
 .five .input-box label {
-    background-color: var(--calc1);
+    background-color: var(--calc2);
 }
 
 .five .input-box input,
 .five .input-box select {
-    border: 2.3px solid var(--dark-calc1);
+    border: 1.5px solid var(--dark-calc2);
 }
 
 .five .input-box input::placeholder {
-    color: var(--dark-calc1);
+    color: var(--dark-calc2);
 }
 
 
@@ -351,19 +351,19 @@ label.title {
     padding: 20px;
     border-radius: 22px;
     box-shadow: 15px 10px 0px 5px #00000033;
-    background-color: var(--calc2);
-    color: var(--text-calc2);
+    background-color: var(--calc3);
+    color: var(--text-calc3);
 }
 
 .six .input-box label {
-    background-color: var(--calc2);
+    background-color: var(--calc3);
 }
 
 .six .input-box input,
 .six .input-box select {
-    border: 2.3px solid var(--dark-calc2);
+    border: 1.5px solid var(--dark-calc3);
 }
 
 .six .input-box input::placeholder {
-    color: var(--dark-calc2);
+    color: var(--dark-calc3);
 }
