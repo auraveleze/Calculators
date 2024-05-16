@@ -124,8 +124,8 @@ section {
 
 .calcs-content .calc {
     display: grid;
-    grid-template-columns: repeat(4, 180px);
-    grid-template-rows: 25px repeat(3, 40px);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 25px repeat(3, 45px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     padding: 15px;
@@ -141,6 +141,19 @@ section {
 .three {
     background-color: var(--calc3);
     color: var(--text-calc3);
+}
+
+.int-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.int-container label {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  gap: 5px;
 }
 
 .input-box {
@@ -306,7 +319,37 @@ label.title {
 
 
 
+/* .calc-content:nth-child(1),
+.provisional {
+    display: none;
+} */
 
+
+.autocomplete-options {
+    position: absolute;
+    width: calc(100% - 2px); /* Ancho igual al input */
+    max-height: 200px; /* Altura máxima */
+    overflow-y: auto; /* Agregar scroll si el contenido excede la altura */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+    z-index: 2; /* Asegura que esté por encima del label */
+}
+
+.autocomplete-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap; /* Evita que el texto se desborde */
+}
+
+.autocomplete-option:hover {
+    background-color: #f2f2f2;
+}
+
+.input-box label {
+    z-index: 1; /* Asegura que el label esté detrás del div de opciones */
+}
 
 
 

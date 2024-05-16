@@ -6,8 +6,6 @@
     <title>Calculadoras</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/index.css">
-
-    
 </head>
 <body>
     <section class="calc-content">
@@ -39,22 +37,23 @@
         <div class="calcs-content">
             <div class="calc two">
                 <h2 class="col-4">Calculadora de Interés</h2>
-                
+
                     <label class="title">Tipo de interés</label>
-                    <div class="">
-                        <div>
-                            <input type="radio" id="typeInt-two" value="simple">
-                            <label>Simple</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="typeInt-two" value="compound">
-                            <label>Compuesto</label>
-                        </div>
+                    <div class="int-container">
+                        <label>
+                            <input type="radio" name="typeInt-two" value="simple">
+                            <span>Simple</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="typeInt-two" value="compound">
+                            <span>Compuesto</span>
+                        </label>
                     </div>
                 
                     <label class="title">¿Que vamos a calcular?</label>
                     <div class="input-box">
                         <select id="value-calculated-two">
+                            <option>Seleccionar...</option>
                             <option value="1">Valor presente</option>
                             <option value="2">Valor futuro</option>
                             <option value="3">Cantidad de tiempo</option>
@@ -88,9 +87,14 @@
                 </div>
 
                 <div class="input-box">
-                    <input id="autocomplete-input-two" value="" type="text" >
                     <label>Periodo de la tasa</label>
-                    <div id="autocomplete-options-two" class="autocomplete-options"></div>
+                    <select id="period-two">
+                        <option value="Mensual">Mensual</option>
+                        <option value="Bimestral">Bimestral</option>
+                        <option value="Trimestral">Trimestral</option>
+                        <option value="Semestral">Semestral</option>
+                        <option value="Anual">Anual</option>
+                    </select>
                 </div>
 
                 <div class="input-box">
@@ -109,10 +113,10 @@
                 <label class="title" for="value-calculated-three">¿Que vamos a calcular?</label>
                 <div class="input-box">
                     <select id="value-calculated-three">
-                        <option value="valorPresente">Valor presente</option>
-                        <option value="valorFuturo">Valor futuro</option>
-                        <option value="tiempoMeses">Cantidad de tiempo</option>
-                        <option value="cuota">Tasa de interés</option>
+                        <option value="1">Valor presente</option>
+                        <option value="2">Valor futuro</option>
+                        <option value="3">Anualidad - vPresente</option>
+                        <option value="4">Anualidad - vFuturo</option>
                     </select>
                 </div>
 
@@ -134,7 +138,7 @@
                 </div>
 
                 <div class="input-box">
-                    <input type="text" id="-three">
+                    <input type="text" id="annuity-three">
                     <label>Anualidad</label>
                 </div>
 
@@ -144,7 +148,7 @@
                 </div>
 
                 <div class="input-box">
-                    <input type="text" id="-three">
+                    <input class="inactive" type="text" id="profit-three" readonly>
                     <label>Rentabilidad (vf)</label>
                 </div>
 
@@ -230,9 +234,15 @@
             </div>
 
             <div class="input-box">
-                <input id="autocomplete-input-five" value="" type="text" >
                 <label>Periodo de la tasa</label>
-                <div id="autocomplete-options-five" class="autocomplete-options"></div>
+                <select id="period-five">
+                    <option>Seleccionar...</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Bimestral">Bimestral</option>
+                    <option value="Trimestral">Trimestral</option>
+                    <option value="Semestral">Semestral</option>
+                    <option value="Anual">Anual</option>
+                </select>
             </div>
 
             <button class="btn col-2" onclick="effectiveOrNominal()">Calcular</button>
@@ -244,23 +254,20 @@
             <label class="title">¿Que vamos a calcular?</label>
             <div class="input-box col-2">
                 <select id="value-calculated-six">
-                    <option value="1">Valor presente</option>
-                    <option value="2">Valor futuro</option>
-                    <option value="3">Cantidad de tiempo</option>
-                    <option value="4">Tasa de interés</option>
+                    <option value="1">Valor futuro</option>
                 </select>
             </div>
 
             <label class="title">Tipo de interés</label>
-            <div class="">
-                <div>
-                    <input type="radio" id="effective-six" value="effective">
-                    <label>Efectivo</label>
-                </div>
-                <div>
-                    <input type="radio" id="nominal-six" value="nominal">
-                    <label>Nominal</label>
-                </div>
+            <div class="int-container">
+                <label>
+                    <input type="radio" value="effective" name="typeInt-six">
+                    <span>Efectiva</span>
+                </label>
+                <label>
+                    <input type="radio" value="nominal" name="typeInt-six">
+                    <span>Nominal</span>
+                </label>
             </div>
 
             <div class="input-box">
@@ -269,9 +276,15 @@
             </div>
 
             <div class="input-box">
-                <input id="autocomplete-input-six" value="" type="text" >
                 <label>Periodo de la tasa</label>
-                <div id="autocomplete-options-six" class="autocomplete-options"></div>
+                <select id="period-six">
+                    <option>Seleccionar...</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Bimestral">Bimestral</option>
+                    <option value="Trimestral">Trimestral</option>
+                    <option value="Semestral">Semestral</option>
+                    <option value="Anual">Anual</option>
+                </select>
             </div>
 
             <div class="input-box">
@@ -280,7 +293,7 @@
             </div>
 
             <div class="input-box">
-                <input type="text" id="futureVal-six" value="">
+                <input class="inactive" type="text" id="futureVal-six" value="" readonly>
                 <label>Valor futuro</label>
             </div>
 
@@ -302,6 +315,7 @@
     <script src="Js/calc2.js" type="text/javascript"></script>
     <script src="Js/calc3.js" type="text/javascript"></script>
     <script src="Js/calc4.js" type="text/javascript"></script>
-    <script src="Js/calc5-6.js" type="text/javascript"></script>
+    <script src="Js/calc5.js" type="text/javascript"></script>
+    <script src="Js/calc6.js" type="text/javascript"></script>
 </body>
 </html>
