@@ -12,7 +12,7 @@
         <div class="one">
             <div class="display">
                 <div id="previous"></div>
-                <div id="current"></div>
+                <div id="current">0</div>
             </div>
             <button class="col-2 btn-one" onclick="display.removeNumbers()">C</button>
             <button class="btn-one" onclick="display.deleteNumber()">&larr;</button>
@@ -157,7 +157,7 @@
         </div>
     </section>
     
-    <section class="provisional">
+    <section>
         <div class="four form">
             <h2>Tabla de amortización</h2>
 
@@ -311,11 +311,90 @@
         </div>
     </section>
 
+    <section>
+        <div class="seven form">
+            <h2>Calculadora de Inversión</h2>
+            <div class="content">
+                <div class="sec-content">
+                    <div class="input-box">
+                        <input type="text" id="initial-investment-seven">
+                        <label for="initial-investment-seven">Inversión Inicial</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="interest-seven" placeholder="Porcentaje (%)">
+                        <label for="interest-seven">Tasa de Interés</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" id="time-seven" placeholder="Meses" value="1" onchange="generateInputFields();">
+                        <label for="periods">Cantidad de Periodos</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="residual-seven" placeholder="Solo ingresar si existe">
+                        <label for="residual-seven">Valor Residual</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="inactive" type="text" id="netVal-six" value="" readonly>
+                        <label>Valor neto</label>
+                    </div>
+                    <button class="btn" onclick="calculateInvestment();">Calcular</button>
+                </div>
+                <div id="for-fields-seven" class="for-container-seven"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="calc eight">
+            <h2 class="col-3">Calculadora de Descuentos</h2>
+                
+            <label class="title">Tipo de descuento</label>
+            <div class="int-container">
+                <label>
+                    <input type="radio" name="typeDisc-eight" value="simple">
+                    <span>Simple</span>
+                </label>
+                <label>
+                    <input type="radio" name="typeDisc-eight" value="compound">
+                    <span>Compuesto</span>
+                </label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="toDiscount-eight" value="" placeholder="Mensual (porcentaje)">
+                <label>Tasa de descuento</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="nominalVal-eight" value="">
+                <label>Valor nominal</label>
+            </div>
+
+            <div class="input-box">
+                <input class="inactive" type="text" id="presentVal-eight" value="" readonly>
+                <label>Valor presente</label>
+            </div>
+
+            <div class="input-box">
+                <input class="inactive" type="text" id="discountVal-eight" value="" readonly>
+                <label>Descuento</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="time-eight" value="" placeholder="Dias">
+                <label>Cantidad de tiempo</label>
+            </div>
+
+            <button class="btn col-2" onclick="calculateDiscount()">Calcular</button>
+        </div>
+    </section>
+
     <script src="Js/calc1.js" type="text/javascript"></script>
     <script src="Js/calc2.js" type="text/javascript"></script>
     <script src="Js/calc3.js" type="text/javascript"></script>
     <script src="Js/calc4.js" type="text/javascript"></script>
     <script src="Js/calc5.js" type="text/javascript"></script>
     <script src="Js/calc6.js" type="text/javascript"></script>
+    <script src="Js/calc7.js" type="text/javascript"></script>
+    <script src="Js/calc8.js" type="text/javascript"></script>
 </body>
 </html>

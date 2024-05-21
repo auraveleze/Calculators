@@ -60,6 +60,30 @@ section {
 
 
 
+
+
+
+input:-webkit-autofill {
+    background-color: transparent; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-moz-autofill {
+    background-color: transparent; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-ms-autofill {
+    background-color: transparent; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+
+
+
 /*     - - - - - - - - - -      Calculator 1     - - - - - - - - - -      */
 .calc-content {
     gap: 4rem;
@@ -244,7 +268,7 @@ label.title {
 .four .content {
     display: grid;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: 40px auto;
+    grid-template-rows: 45px auto;
     grid-column-gap: 1.5rem;
     padding: 30px;
 }
@@ -319,37 +343,10 @@ label.title {
 
 
 
-/* .calc-content:nth-child(1),
-.provisional {
-    display: none;
-} */
 
 
-.autocomplete-options {
-    position: absolute;
-    width: calc(100% - 2px); /* Ancho igual al input */
-    max-height: 200px; /* Altura máxima */
-    overflow-y: auto; /* Agregar scroll si el contenido excede la altura */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    display: none;
-    z-index: 2; /* Asegura que esté por encima del label */
-}
 
-.autocomplete-option {
-    padding: 8px 12px;
-    cursor: pointer;
-    white-space: nowrap; /* Evita que el texto se desborde */
-}
 
-.autocomplete-option:hover {
-    background-color: #f2f2f2;
-}
-
-.input-box label {
-    z-index: 1; /* Asegura que el label esté detrás del div de opciones */
-}
 
 
 
@@ -360,7 +357,7 @@ label.title {
 .five {
     display: grid;
     grid-template-columns: repeat(2, 200px);
-    grid-template-rows: 30px repeat(4, 40px);
+    grid-template-rows: 30px repeat(4, 45px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     padding: 20px;
@@ -388,7 +385,7 @@ label.title {
 .six {
     display: grid;
     grid-template-columns: repeat(3, 200px);
-    grid-template-rows: 30px repeat(4, 40px);
+    grid-template-rows: 30px repeat(4, 45px);
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     padding: 20px;
@@ -409,4 +406,134 @@ label.title {
 
 .six .input-box input::placeholder {
     color: var(--dark-calc3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seven {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--calc4);
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+.seven .content {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-column-gap: .5rem;
+    padding: 30px;
+}
+
+.seven .sec-content {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 45px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+}
+
+.seven .for-container-seven {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 1.5rem;
+}
+
+.seven .for-container-seven .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.seven .for-container-seven .row input {
+    height: 45px;
+}
+
+
+
+
+
+
+
+.seven .input-box label {
+    background-color: var(--calc4);
+}
+
+.seven .input-box input{
+    border: 1.5px solid var(--dark-calc4);
+}
+
+.seven .input-box input::placeholder {
+    color: var(--dark-calc4);
+}
+
+.seven .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.seven .btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.eight {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 30px repeat(3, 40px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+    background-color: var(--calc1);
+    color: var(--text-calc1);
+}
+
+.eight .input-box label {
+    background-color: var(--calc1);
+}
+
+.eight .input-box input,
+.eight .input-box select {
+    border: 1.5px solid var(--dark-calc1);
+}
+
+.eight .input-box input::placeholder {
+    color: var(--dark-calc1);
 }
